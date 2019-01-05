@@ -123,11 +123,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controller.js" />
-    <Content Include="app\hubs.js" />
-    <Content Include="app\index.html" />
-    <Content Include="app\services.js" />
-    <Content Include="app\jquery.signalR.min.js" />
+    <Content Include="app\controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\hubs.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\services.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\jquery.signalR.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -14,13 +14,15 @@ app.service('historyService', [function () {
 
 app.service('signalrService', ['historyService', '$timeout', function (historyService, timeout) {
     var exampleHubProxy;
-
     function start() {
+        console.info('starting signalr');
+
         historyService.add('signalr starting...');
 
         exampleHubProxy = $.connection.exampleHub;
         exampleHubProxy.client.message = function (message) {
             timeout(() => {
+                console.info('message from signalr', message);
                 historyService.add(`message from signalr: ${message}.`)
             });
         };
@@ -29,7 +31,6 @@ app.service('signalrService', ['historyService', '$timeout', function (historySe
             timeout(() => {
                 historyService.add('signalr connected.');
             });
-            //contosoChatHubProxy.server.newContosoChatMessage($('#displayname').val(), $('#message').val());
         });
     }
 

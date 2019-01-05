@@ -4,3 +4,4 @@ obj/
 *.user
 packages/
 node_modules
+.tmp
