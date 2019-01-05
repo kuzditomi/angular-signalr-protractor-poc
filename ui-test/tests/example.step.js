@@ -37,7 +37,7 @@ When('I ping the hub', async function () {
     await pingButton.click();
 });
 
-Then('the push from hub arrives.', async function () {
+Then('the push from hub arrives', async function () {
     const pre = element(by.css('pre'));
     const text = await pre.getText();
 

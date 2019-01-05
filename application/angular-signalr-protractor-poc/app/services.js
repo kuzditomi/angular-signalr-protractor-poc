@@ -15,7 +15,10 @@ app.service('historyService', [function () {
 app.service('signalrService', ['historyService', '$timeout', function (historyService, timeout) {
     var exampleHubProxy;
     function start() {
-        console.info('starting signalr');
+        console.log('random log')
+        console.info('info about starting signalr');
+        console.warn('prepare!');
+        console.error('just kidding, no error');
 
         historyService.add('signalr starting...');
 
